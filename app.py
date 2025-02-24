@@ -6,11 +6,10 @@ import os
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "https://zoe-web.onrender.com"}})  # Habilita CORS para a origem específica
 
-api_key = os.getenv("AIzaSyDG7nEpQ6eeqiyWhIeUytZaI4Gqs9nOQZQ")
 
 
 # Configurar a API do Gemini
-genai.configure(api_key=api_key)
+genai.configure(api_key='AIzaSyDG7nEpQ6eeqiyWhIeUytZaI4Gqs9nOQZQ')
 model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
@@ -42,4 +41,4 @@ def clear_route():
     return jsonify(message="Chat history cleared")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
