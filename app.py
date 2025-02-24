@@ -1,15 +1,12 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import google.generativeai as genai
-from dotenv import load_dotenv
 import os
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "https://zoe-web.onrender.com"}})  # Habilita CORS para a origem específica
 
-load_dotenv()
-
-api_key = os.getenv("API_KEY")
+api_key = os.getenv("AIzaSyDG7nEpQ6eeqiyWhIeUytZaI4Gqs9nOQZQ")
 
 
 # Configurar a API do Gemini
