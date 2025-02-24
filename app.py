@@ -1,19 +1,12 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import google.generativeai as genai
-from dotenv import load_dotenv
-import os
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})  # Habilita CORS para a origem específica
 
-load_dotenv()
-
-api_key = os.getenv("API_KEY")
-
-
 # Configurar a API do Gemini
-genai.configure(api_key=api_key)
+genai.configure(api_key='AIzaSyDG7nEpQ6eeqiyWhIeUytZaI4Gqs9nOQZQ')
 model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
