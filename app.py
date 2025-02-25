@@ -4,7 +4,7 @@ import google.generativeai as genai
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://zoe-web.onrender.com"}})  # Habilita CORS para a origem específica
+CORS(app, resources={r"/*": {"origins": "https://zoe-web-delta.vercel.app/"}})  # Habilita CORS para a origem específica
 
 
 
