@@ -41,4 +41,4 @@ def clear_route():
     return jsonify(message="Chat history cleared")
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=10000, debug=True)
+    app.run(debug=True)
