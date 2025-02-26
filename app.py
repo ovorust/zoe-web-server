@@ -10,7 +10,7 @@ CORS(app, resources={r"/*": {"origins": ["https://zoe-web.onrender.com", "https:
 
 # Configurar a API do Gemini
 genai.configure(api_key='AIzaSyDG7nEpQ6eeqiyWhIeUytZaI4Gqs9nOQZQ')
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-2.0-flash')
 chat = model.start_chat(history=[])
 
 @app.route('/')
