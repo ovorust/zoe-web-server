@@ -12,6 +12,7 @@ CORS(app, resources={r"/*": {"origins": ["https://zoe-web.onrender.com", "https:
 genai.configure(api_key='AIzaSyDG7nEpQ6eeqiyWhIeUytZaI4Gqs9nOQZQ')
 model = genai.GenerativeModel('gemini-2.0-flash')
 chat = model.start_chat(history=[])
+chat.send_message("Você vai se chamar Zoe. É normal que as pessoas te chamem de Zoe. Você é uma Assistente Virtual. Você tem uma boa didática e sabe transmitir conhecimento, falar de forma fácil de compreender.")
 
 @app.route('/')
 def home():
